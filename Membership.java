@@ -1,5 +1,4 @@
 
-
 public class Membership {
 
 	private boolean membership;
