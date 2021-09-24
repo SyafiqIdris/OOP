@@ -44,6 +44,5 @@ public class Discount {
 	public double getDiscountedPrice() {
 		return (price - ((percentageDiscount/100) * price));
 	}
-	testing
-		bah okay tu
+
 }
