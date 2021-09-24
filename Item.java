@@ -1,4 +1,3 @@
-package featurethree;
 
 public class Item {
 	private long id;
