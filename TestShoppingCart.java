@@ -1,15 +1,17 @@
 package featuretwo;
 
+import featurethree.Item;
+
 public class TestShoppingCart {
 
 	public static void main(String[] args)
 	{
 	    // creates new items with product name, quantity and unit price
-	    Item i1 = new Item("Cereal", 3, 100.0);
-	    Item i2 = new Item("Cheese Slices", 2, 50.0);
-	    Item i3 = new Item("Bread", 1, 75.0);
-	    Item i4 = new Item("Eggs", 50, 10.0);
-	    Item i5 = new Item("Milk", 2, 100.0);
+	    Item i1 = new Item(3,"BOAT",1, 100.0);
+	    Item i2 = new Item(2, "Cheese Slices",1, 50.0);
+	    Item i3 = new Item(1, "Bread",1, 75.0);
+	    Item i4 = new Item(50, "Eggs",1, 10.0);
+	    Item i5 = new Item(2, "Chicken Salami",1, 100.0);
 	    
 	    ShoppingCart cart = new ShoppingCart();
 	    
@@ -62,7 +64,7 @@ public class TestShoppingCart {
 //	    System.out.println(payableAmount);    
 
 	    /* apply a coupon code */
-	    cart.applyCoupon("IND10"); //untuk discount kali
+	    cart.applyCoupon("IND50"); //untuk discount kali
 	    
 	    System.out.println();
 	    /* 
