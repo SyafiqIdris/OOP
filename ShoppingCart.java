@@ -2,25 +2,17 @@ package featuretwo;
 import java.util.ArrayList;
 import java.util.ListIterator;
 
-import featurethree.Item;
-
-//import featureone.Discount;
 
 public class ShoppingCart {
 
 	ArrayList<Item> item;
 	double totalAmount;
-//	double payableAmount;
 	double discount;
-//	double tax;
-	String coupon;
+	
 	ShoppingCart() {
 		this.item = new ArrayList<Item>();
-		this.coupon = "";
 		this.totalAmount = 0;
-//		this.payableAmount = 0;
 		this.discount = 0;
-//		this.tax = 0;
 	}
 	public void addToCart(Item item) {
 		this.item.add(item);
@@ -54,21 +46,7 @@ public class ShoppingCart {
 		}
 		return this.totalAmount;
 	}
-	public void applyCoupon(String coupon) { //for discount
-		this.coupon = coupon;
-		if (coupon.equals("IND10")) {
-			this.discount = this.getTotalAmount() * (0.1);
-			this.totalAmount = this.totalAmount - this.discount;
-		} else {
-			this.totalAmount = this.totalAmount;
-		}
-}
-//	public double getPayableAmount() {
-//		this.payableAmount = 0;
-//		this.tax = this.totalAmount * (0.14);
-//		this.payableAmount = this.totalAmount + this.tax;
-//		return this.payableAmount;
-//	}
+
 	public void printInvoice() {
 		ListIterator<Item> iterator3 = item.listIterator();
 		while(iterator3.hasNext()) {
@@ -79,11 +57,8 @@ public class ShoppingCart {
 			System.out.println(item4.getPrice() * item4.getQuantity());
 		}
 		System.out.println("\t\t\t" + "Total    : " + this.getTotalAmount());
-		this.applyCoupon(this.coupon);
 		System.out.println("\t\t\t" + "Discount : " + this.discount);
-//		this.getPayableAmount();
-//		System.out.println("\t\t\t" + "Tax      : " + this.tax);
-//		System.out.println("\t\t\t" + "Total    : " + this.getPayableAmount());
+
 	}
 
 }
