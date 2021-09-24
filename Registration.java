@@ -1,10 +1,11 @@
-package featurefour;
+
 
 public class Registration {
 
 	private int id;
 	private String username;
 	private String password;
+	private String membership;
 	
 	Registration(){
 		id = 0;
@@ -12,10 +13,11 @@ public class Registration {
 		password = "";
 	}
 	
-	public Registration (int newId, String newUsername, String newPassword) {
+	public Registration (int newId, String newUsername, String newPassword, String newMembership) {
 		id = newId;
 		username = newUsername;
 		password = newPassword;
+		membership = newMembership;
 	}
 	
 	public void setId(int newId) {
@@ -30,6 +32,10 @@ public class Registration {
 		password = newPassword;
 	}
 	
+	public void setMembership(String newMembership) {
+		membership = newMembership;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -42,7 +48,11 @@ public class Registration {
 		return password;
 	}
 	
+	public String getMembership() {
+		return membership;
+	}
+	
 	public String toString() {
-		return "Account registered" + "\n" + "ID:" + getId() + "\n" + "Username:" + getUsername() + "\n" + "Password:" + getPassword();
+		return "Customer ID: " + getId() + "\n" + "Username: " + getUsername() + "\n" + "Password: " + getPassword() + "\n" + "Membership status: " + getMembership();
 	}
 }
