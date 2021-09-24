@@ -1,4 +1,3 @@
-import featurethree.Item;
 
 public class TestApp {
 
