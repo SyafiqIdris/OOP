@@ -1,5 +1,4 @@
 
-
 public class Registration {
 
 	private int id;
@@ -11,6 +10,7 @@ public class Registration {
 		id = 0;
 		username = "";
 		password = "";
+		membership = "";
 	}
 	
 	public Registration (int newId, String newUsername, String newPassword, String newMembership) {
