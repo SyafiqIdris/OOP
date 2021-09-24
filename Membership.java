@@ -1,10 +1,10 @@
-package featureone;
+
 
 public class Membership {
 
 	private boolean membership;
-	private double price;
-	private double memberDiscount;
+	public double price;
+	public double memberDiscount;
 	
 	Membership(){
 		membership = false;
@@ -46,9 +46,9 @@ public class Membership {
 	
 	public String toString() {
 		if (membership == true) {
-			return "Total amount: " + getDiscountedPrice();
+			return "Total amount after discount:"+ " $" + getDiscountedPrice();
 		}else {
-			return "Total amount: " + price;
+			return "Total amount:" + " $"+ price;
 		}
 	}
 }
